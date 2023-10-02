@@ -10,7 +10,7 @@ function App() {
   return (
     <>
         <CssBaseline>
-        <AppBar position="relative">
+        <AppBar position="sticky">
           <Toolbar>
             <Typography variant="h6">
               TFTMaster

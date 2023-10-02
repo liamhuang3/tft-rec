@@ -25,7 +25,7 @@ const SelectorCard: React.FC = () => {
                 </Grid>
                 </div>
                 <div style={{ display:'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <Button>Recommend</Button>
+                    <Button variant="contained">Recommend</Button>
                 </div>
             </CardContent>
         </Card>
