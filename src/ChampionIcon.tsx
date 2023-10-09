@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, Avatar } from '@mui/material';
 
 interface ChampionIconProps {
-  imageUrl: string; // The URL of the image to be displayed
+  imageUrl?: string; // The URL of the image to be displayed
 }
 
 
