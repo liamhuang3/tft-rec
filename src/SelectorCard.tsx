@@ -39,7 +39,7 @@ const SelectorCard: React.FC = () => {
                 </CardContent>
             </Card>
             {showRecommendation && (
-                <RecommendationCard></RecommendationCard>
+                <RecommendationCard iconUrls={[]}></RecommendationCard>
             )}
         </div>
     )
