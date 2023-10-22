@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Sword",
+        "iconUrl": "/items/TFT_Item_BFSword.png"
+    },
+    {
+        "name": "Vest",
+        "iconUrl": "/items/TFT_Item_ChainVest.png"
+    },
+    {
+        "name": "Belt",
+        "iconUrl": "/items/TFT_Item_GiantsBelt.png"
+    },
+    {
+        "name": "Rod",
+        "iconUrl": "/items/TFT_Item_NeedlesslyLargeRod.png"
+    },
+    {
+        "name": "Cloak",
+        "iconUrl": "/items/TFT_Item_NegatronCloak.png"
+    },
+    {
+        "name": "Bow",
+        "iconUrl": "/items/TFT_Item_RecurveBow.png"
+    },
+    {
+        "name": "Glove",
+        "iconUrl": "/items/TFT_Item_SparringGloves.png"
+    },
+    {
+        "name": "Tear",
+        "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+    }
+]

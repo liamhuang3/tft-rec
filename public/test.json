@@ -1,14 +1,233 @@
 [
     {
-      "name": "Option 1",
-      "iconUrl": "/logo192.png"
+      "name": "Aatrox",
+      "iconUrl": "/champions/aatrox.png"
     },
     {
-      "name": "Option 2",
-      "iconUrl": "/logo192.png"
+      "name": "Ahri",
+      "iconUrl": "/champions/ahri.png"
     },
     {
-      "name": "Option 3",
-      "iconUrl": "/logo192.png"
+      "name": "Aphelios",
+      "iconUrl": "/champions/aphelios.png"
+    },
+    {
+      "name": "Ashe",
+      "iconUrl": "/champions/ashe.png"
+    },
+    {
+      "name": "Azir",
+      "iconUrl": "/champions/azir.png"
+    },
+    {
+      "name": "Bel'veth",
+      "iconUrl": "/champions/belveth.png"
+    },
+    {
+      "name": "Cassiopeia",
+      "iconUrl": "/champions/cassiopeia.png"
+    },
+    {
+      "name": "Cho'Gath",
+      "iconUrl": "/champions/chogath.png"
+    },
+    {
+      "name": "Darius",
+      "iconUrl": "/champions/darius.png"
+    },
+    {
+      "name": "Ekko",
+      "iconUrl": "/champions/ekko.png"
+    },
+    {
+      "name": "Fiora",
+      "iconUrl": "/champions/fiora.png"
+    },
+    {
+      "name": "Galio",
+      "iconUrl": "/champions/galio.png"
+    },
+    {
+      "name": "Gangplank",
+      "iconUrl": "/champions/gangplank.png"
+    },
+    {
+      "name": "Graves",
+      "iconUrl": "/champions/graves.png"
+    },
+    {
+      "name": "Heimerdinger",
+      "iconUrl": "/champions/heimerdinger.png"
+    },
+    {
+      "name": "Illaoi",
+      "iconUrl": "/champions/illaoi.png"
+    },
+    {
+      "name": "Irelia",
+      "iconUrl": "/champions/irelia.png"
+    },
+    {
+      "name": "Jarvan IV",
+      "iconUrl": "/champions/jarvaniv.png"
+    },
+    {
+      "name": "Jayce",
+      "iconUrl": "/champions/jayce.png"
+    },
+    {
+      "name": "Jhin",
+      "iconUrl": "/champions/jhin.png"
+    },
+    {
+      "name": "Jinx",
+      "iconUrl": "/champions/jinx.png"
+    },
+    {
+      "name": "Kai'Sa",
+      "iconUrl": "/champions/kaisa.png"
+    },
+    {
+      "name": "Karma",
+      "iconUrl": "/champions/karma.png"
+    },
+    {
+      "name": "Kassadin",
+      "iconUrl": "/champions/kassadin.png"
+    }
+    ,
+    {
+      "name": "Katarina",
+      "iconUrl": "/champions/katarina.png"
+    }
+    ,
+    {
+      "name": "Kayle",
+      "iconUrl": "/champions/kayle.png"
+    }
+    ,
+    {
+      "name": "K'Sante",
+      "iconUrl": "/champions/ksante.png"
+    },
+    {
+      "name": "Milio",
+      "iconUrl": "/champions/milio.png"
+    },
+    {
+      "name": "Miss Fortune",
+      "iconUrl": "/champions/missfortune.png"
+    },
+    {
+      "name": "Mordekaiser",
+      "iconUrl": "/champions/mordekaiser.png"
+    },
+    {
+      "name": "Naafiri",
+      "iconUrl": "/champions/naafiri.png"
+    },
+    {
+      "name": "Nasus",
+      "iconUrl": "/champions/nasus.png"
+    },
+    {
+      "name": "Nautilus",
+      "iconUrl": "/champions/nautilus.png"
+    },
+    {
+      "name": "Nilah",
+      "iconUrl": "/champions/nilah.png"
+    },
+    {
+      "name": "Orianna",
+      "iconUrl": "/champions/orianna.png"
+    },
+    {
+      "name": "Poppy",
+      "iconUrl": "/champions/poppy.png"
+    },
+    {
+      "name": "Qiyana",
+      "iconUrl": "/champions/qiyana.png"
+    },
+    {
+      "name": "Quinn",
+      "iconUrl": "/champions/quinn.png"
+    },
+    {
+      "name": "Rek'sai",
+      "iconUrl": "/champions/reksai.png"
+    },
+    {
+      "name": "Renekton",
+      "iconUrl": "/champions/renekton.png"
+    },
+    {
+      "name": "Ryze",
+      "iconUrl": "/champions/ryze.png"
+    },
+    {
+      "name": "Samira",
+      "iconUrl": "/champions/samira.png"
+    },
+    {
+      "name": "Sejuani",
+      "iconUrl": "/champions/sejuani.png"
+    },
+    {
+      "name": "Sett",
+      "iconUrl": "/champions/sett.png"
+    },
+    {
+      "name": "Shen",
+      "iconUrl": "/champions/shen.png"
+    },
+    {
+      "name": "Silco",
+      "iconUrl": "/champions/silco.png"
+    },
+    {
+      "name": "Sion",
+      "iconUrl": "/champions/sion.png"
+    },
+    {
+      "name": "Sona",
+      "iconUrl": "/champions/sona.png"
+    },
+    {
+      "name": "Soraka",
+      "iconUrl": "/champions/soraka.png"
+    },
+    {
+      "name": "Swain",
+      "iconUrl": "/champions/swain.png"
+    },
+    {
+      "name": "Taliyah",
+      "iconUrl": "/champions/taliyah.png"
+    },
+    {
+      "name": "Taric",
+      "iconUrl": "/champions/taric.png"
+    },
+    {
+      "name": "Twisted Fate",
+      "iconUrl": "/champions/twistedfate.png"
+    },
+    {
+      "name": "Vel'Koz",
+      "iconUrl": "/champions/velkoz.png"
+    },
+    {
+      "name": "Vi",
+      "iconUrl": "/champions/vi.png"
+    },
+    {
+      "name": "Warwick",
+      "iconUrl": "/champions/warwick.png"
+    },
+    {
+      "name": "Xayah",
+      "iconUrl": "/champions/xayah.png"
     }
   ]

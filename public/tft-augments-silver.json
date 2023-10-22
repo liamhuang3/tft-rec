@@ -1,0 +1,274 @@
+[
+    {
+        "name": "AFK",
+        "iconUrl": "/augments/AFK-I.png"
+    },
+    {
+        "name": "All Natural I",
+        "iconUrl": "/augments/All-Natural-I.TFT_Set9.png"
+    },
+    {
+        "name": "Army Building",
+        "iconUrl": "/augments/Building-an-army-I.TFT_Set9.png"
+    },
+    {
+        "name": "Bastion Heart",
+        "iconUrl": "/augments/Bastion-Heart-I.TFT_Set9.png"
+    },
+    {
+        "name": "Battle Ready",
+        "iconUrl": "/augments/Battle-Ready-I.TFT_Set9.png"
+    },
+    {
+        "name": "Blood Money",
+        "iconUrl": "/augments/Blood-Money-I.TFT_Set9.png"
+    },
+    {
+        "name": "Branching Out",
+        "iconUrl": "/augments/Branching-Out-I.TFT_Set9.png"
+    },
+    {
+        "name": "Bronze Ticket",
+        "iconUrl": "/augments/GoldenTicket1.png"
+    },
+    {
+        "name": "Bruiser Heart",
+        "iconUrl": "/augments/BruiserHeart1.png"
+    },
+    {
+        "name": "Buried Treasures I",
+        "iconUrl": "/augments/Buried-Treasures-I.TFT_Set9.png"
+    },
+    {
+        "name": "Caretaker's Ally",
+        "iconUrl": "/augments/Caretaker_s-Chosen-I.TFT_Set9.png"
+    },
+    {
+        "name": "Challenger Heart",
+        "iconUrl": "/augments/ChallengerHeart1.png"
+    },
+    {
+        "name": "Component Buffet",
+        "iconUrl": "/augments/The-customer-is-always-right-I.TFT_Set9.png"
+    },
+    {
+        "name": "Consistency",
+        "iconUrl": "/augments/Consistency-I.png"
+    },
+    {
+        "name": "Cutting Corners",
+        "iconUrl": "/augments/Cutting-Corners-I.TFT_Set9.png"
+    },
+    {
+        "name": "Cybernetic Bulk I",
+        "iconUrl": "/augments/Cybernetic-Bulk-I.TFT_Set9.png"
+    },
+    {
+        "name": "Cybernetic Leech I",
+        "iconUrl": "/augments/Cybernetic-Leech-I.TFT_Set9.png"
+    },
+    {
+        "name": "Final Grab Bag",
+        "iconUrl": "/augments/Final-Grab-Bag-I.TFT_Set9.png"
+    },
+    {
+        "name": "Gotta Go Fast!",
+        "iconUrl": "/augments/Gotta-Go-Fast-I.TFT_Set9.png"
+    },
+    {
+        "name": "Gunner Heart",
+        "iconUrl": "/augments/Gunner-Heart-I.TFT_Set9.png"
+    },
+    {
+        "name": "Harmacist I",
+        "iconUrl": "/augments/Harmacist-1-2-3-I.TFT_Set9.png"
+    },
+    {
+        "name": "Healing Orbs I",
+        "iconUrl": "/augments/Healing-Orbs-I.TFT_Set9.png"
+    },
+    {
+        "name": "Inconsistency",
+        "iconUrl": "/augments/Inconsistency-I.TFT_Set9.png"
+    },
+    {
+        "name": "Indomitable Will",
+        "iconUrl": "/augments/Indomitable-Will-I.TFT_Set9.png"
+    },
+    {
+        "name": "Invoker Heart",
+        "iconUrl": "/augments/Invoker-Heart-I.TFT_Set9.png"
+    },
+    {
+        "name": "Iron Assets",
+        "iconUrl": "/augments/Iron-Assets-I.TFT_Set9.png"
+    },
+    {
+        "name": "It Pays To Learn",
+        "iconUrl": "/augments/It-Pays-To-Learn-I.TFT_Set9.png"
+    },
+    {
+        "name": "Item Grab Bag I",
+        "iconUrl": "/augments/ItemGrabBag1.png"
+    },
+    {
+        "name": "Jeweled Lotus I",
+        "iconUrl": "/augments/Jeweled-Lotus-I.png"
+    },
+    {
+        "name": "Job's Done",
+        "iconUrl": "/augments/Job_s-Done-I.TFT_Set9.png"
+    },
+    {
+        "name": "Juggernaut Heart",
+        "iconUrl": "/augments/Juggernaut-Heart-I.TFT_Set9.png"
+    },
+    {
+        "name": "Knowledge Download I",
+        "iconUrl": "/augments/Knowledge-Download-I.TFT_Set9.png"
+    },
+    {
+        "name": "Lategame Specialist",
+        "iconUrl": "/augments/Late-Game-Specialist-I.png"
+    },
+    {
+        "name": "Latent Forge",
+        "iconUrl": "/augments/Long-time-Crafting-I.TFT_Set9.png"
+    },
+    {
+        "name": "Missed Connections",
+        "iconUrl": "/augments/Missed-Connections-I.TFT_Set9.png"
+    },
+    {
+        "name": "Money!",
+        "iconUrl": "/augments/Money-I.TFT_Set9.png"
+    },
+    {
+        "name": "On a Roll",
+        "iconUrl": "/augments/On-a-Roll-I.TFT_Set9.png"
+    },
+    {
+        "name": "One Twos Three",
+        "iconUrl": "/augments/Threes-Company-I.png"
+    },
+    {
+        "name": "One, Two, Five!",
+        "iconUrl": "/augments/One-Two-Five-I.TFT_Set9.png"
+    },
+    {
+        "name": "Pandora's Bench",
+        "iconUrl": "/augments/Pandoras-Bench-I.png"
+    },
+    {
+        "name": "Pandora's Items",
+        "iconUrl": "/augments/Pandora1.png"
+    },
+    {
+        "name": "Partial Ascension",
+        "iconUrl": "/augments/Ascension1.png"
+    },
+    {
+        "name": "Pumping Up I",
+        "iconUrl": "/augments/Pumping-Up-I.TFT_Set9.png"
+    },
+    {
+        "name": "Recombobulator",
+        "iconUrl": "/augments/Recombobulator-I.png"
+    },
+    {
+        "name": "Red Buff",
+        "iconUrl": "/augments/Red-Buff-I.TFT_Set9.png"
+    },
+    {
+        "name": "Risky Moves",
+        "iconUrl": "/augments/Risky-Moves-I.TFT_Set9.png"
+    },
+    {
+        "name": "Rogue Heart",
+        "iconUrl": "/augments/Rogue-Heart-I.TFT_Set9.png"
+    },
+    {
+        "name": "Rolling For Days I",
+        "iconUrl": "/augments/Rolling-For-Days-I.TFT_Set9.png"
+    },
+    {
+        "name": "Silver Legend",
+        "iconUrl": "/augments/Missing-T1.png"
+    },
+    {
+        "name": "Silver Spoon",
+        "iconUrl": "/augments/Silver-Spoon-I.TFT_Set9.png"
+    },
+    {
+        "name": "Slayer Heart",
+        "iconUrl": "/augments/Slayer-Heart-I.TFT_Set9.png"
+    },
+    {
+        "name": "Small Forge",
+        "iconUrl": "/augments/Forge-I.TFT_Set9.png"
+    },
+    {
+        "name": "Social Distancing I",
+        "iconUrl": "/augments/Social-Distance-I.TFT_Set9.png"
+    },
+    {
+        "name": "Sorcerer Heart",
+        "iconUrl": "/augments/Sorcerer-Heart-I.TFT_Set9.png"
+    },
+    {
+        "name": "Spoils of War I",
+        "iconUrl": "/augments/Spoils-Of-War-Legend-I.TFT_Set9.png"
+    },
+    {
+        "name": "Stationary Support I",
+        "iconUrl": "/augments/Stationary-Support-I.TFT_Set9_Stage2.png"
+    },
+    {
+        "name": "Teaming Up I",
+        "iconUrl": "/augments/Teaming-Up-I.TFT_Set9_Stage2.png"
+    },
+    {
+        "name": "Tiny Grab Bag",
+        "iconUrl": "/augments/Grab-Bag-I.TFT_Set9.png"
+    },
+    {
+        "name": "Tiny Power I",
+        "iconUrl": "/augments/Tiny-Power-I.TFT_Set9.png"
+    },
+    {
+        "name": "Tiny Titans",
+        "iconUrl": "/augments/Tiny-Titans-I.png"
+    },
+    {
+        "name": "Training Reward",
+        "iconUrl": "/augments/Training-Reward-I.TFT_Set9.png"
+    },
+    {
+        "name": "Transfusion I",
+        "iconUrl": "/augments/Transfusion-I.TFT_Set9.png"
+    },
+    {
+        "name": "Unburdened I",
+        "iconUrl": "/augments/Unladen-Airspeed-Velocity-I.TFT_Set9.png"
+    },
+    {
+        "name": "Unified Resistance I",
+        "iconUrl": "/augments/Red-Rover-I.TFT_Set9.png"
+    },
+    {
+        "name": "Vanquisher Heart",
+        "iconUrl": "/augments/Vanquisher-Heart-I.TFT_Set9_Stage2.png"
+    },
+    {
+        "name": "Well-Earned Comforts I",
+        "iconUrl": "/augments/Well-Earned-Comforts-I.TFT_Set9.png"
+    },
+    {
+        "name": "Young and Wild and Free",
+        "iconUrl": "/augments/Young-and-wild-and-free-I.TFT_Set9.png"
+    },
+    {
+        "name": "Zaun Heart",
+        "iconUrl": "/augments/Zaun-Heart-I.TFT_Set9.png"
+    }
+]

@@ -1,15 +1,17 @@
 import { Card, CardContent, Container, Typography, Divider, Grid } from '@mui/material';
 import React from 'react';
-import one_img from './images/1_trans.png';
-import two_img from './images/2_trans.png';
-import three_img from './images/3_trans.png';
+import one_img from './assets/1_trans.png';
+import two_img from './assets/2_trans.png';
+import three_img from './assets/3_trans.png';
 import { Option } from './DropdownSelector';
 
 interface RecommendationCardProps {
-    iconUrls: Option[]; // Array of image URLs
+    championsList: Option[];
+    itemsList: Option[];
+    augmentsList: Option[];
   }
 
-const RecommendationCard: React.FC<RecommendationCardProps> = ({ iconUrls }) => {
+const RecommendationCard: React.FC<RecommendationCardProps> = ({ championsList, itemsList, augmentsList }) => {
     return(
         <div>
            <Card sx={{ mt: '16px', mx: '32px' }}>

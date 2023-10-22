@@ -1,0 +1,146 @@
+[
+  {
+      "name": "Adaptive Helm",
+      "iconUrl": "/items/TFT_Item_BFSword.png"
+  },
+  {
+      "name": "Archangel's Staff",
+      "iconUrl": "/items/TFT_Item_ChainVest.png"
+  },
+  {
+      "name": "Bloodthirster",
+      "iconUrl": "/items/TFT_Item_GiantsBelt.png"
+  },
+  {
+      "name": "Blue Buff",
+      "iconUrl": "/items/TFT_Item_NeedlesslyLargeRod.png"
+  },
+  {
+      "name": "Bramble Vest",
+      "iconUrl": "/items/TFT_Item_NegatronCloak.png"
+  },
+  {
+      "name": "Crownguard",
+      "iconUrl": "/items/TFT_Item_RecurveBow.png"
+  },
+  {
+      "name": "Deathblade",
+      "iconUrl": "/items/TFT_Item_SparringGloves.png"
+  },
+  {
+      "name": "Dragon's Claw",
+      "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Edge of Night",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Gargoyle's Stoneplate",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Giant Slayer",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Guardbreaker",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Guinsoo's Rageblade",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Hand of Justice",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Hextech Gunblade",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Infinity Edge",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Ionic Spark",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Jeweled Gauntlet",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Last Whisper",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Morellonomicon",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Nashor's Tooth",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Night Harvester",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Protector's Vow",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Quicksilver",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Rabadon's Deathcap",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Rapidfire Cannon",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Redemption",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Runaan's Hurricane",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Spear of Shojin",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Statikk Shiv",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Sterak's Gage",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Sunfire Cape",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Tactician's Crown",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Thief's Gloves",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Titan's Resolve",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  },
+  {
+    "name": "Warmog's Armor",
+    "iconUrl": "/items/TFT_Item_TearOfTheGoddess.png"
+  }
+]

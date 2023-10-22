@@ -1,0 +1,330 @@
+[
+    {
+        "name": "Ancient Archives II",
+        "iconUrl": "/augments/AncientArchives3.png"
+    },
+    {
+        "name": "Balanced Budget III",
+        "iconUrl": "/augments/Balanced-Budget-III.TFT_Set9.png"
+    },
+    {
+        "name": "Bastion Crown",
+        "iconUrl": "/augments/Bastion-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Battle Ready III",
+        "iconUrl": "/augments/Battle-Ready-III.TFT_Set9.png"
+    },
+    {
+        "name": "Bilgewater Crown",
+        "iconUrl": "/augments/Bilgewater-Crown-III.TFT_Set9_Stage2.png"
+    },
+    {
+        "name": "Binary Airdrop",
+        "iconUrl": "/augments/BinaryAirdrop3.png"
+    },
+    {
+        "name": "Birthday Present",
+        "iconUrl": "/augments/Golden-Gifts-III.png"
+    },
+    {
+        "name": "Blinding Speed",
+        "iconUrl": "/augments/Berserk-III.TFT_Set9.png"
+    },
+    {
+        "name": "Bruiser Crown",
+        "iconUrl": "/augments/Bastion-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Built Different III",
+        "iconUrl": "/augments/BuiltDifferent3.png"
+    },
+    {
+        "name": "Buried Treasures III",
+        "iconUrl": "/augments/Buried-Treasures-III.TFT_Set9.png"
+    },
+    {
+        "name": "Caretaker's Chosen",
+        "iconUrl": "/augments/Caretaker_s-Chosen-III.TFT_Set9.png"
+    },
+    {
+        "name": "Challenger Crown",
+        "iconUrl": "/augments/ChallengerSoul3.png"
+    },
+    {
+        "name": "Cruel Pact",
+        "iconUrl": "/augments/Sacrificial-Pact-III.png"
+    },
+    {
+        "name": "Cursed Crown",
+        "iconUrl": "/augments/CursedCrown-III.png"
+    },
+    {
+        "name": "Cybernetic Bulk III",
+        "iconUrl": "/augments/Cybernetic-Bulk-III.TFT_Set9.png"
+    },
+    {
+        "name": "Cybernetic Leech III",
+        "iconUrl": "/augments/Cybernetic-Leech-III.TFT_Set9.png"
+    },
+    {
+        "name": "Demacia Crown",
+        "iconUrl": "/augments/Demacia-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Double Trouble III",
+        "iconUrl": "/augments/Double-Trouble-III.png"
+    },
+    {
+        "name": "Endless Hordes",
+        "iconUrl": "/augments/100-Duck-Sized-Horses-III.TFT_Set9.png"
+    },
+    {
+        "name": "Final Ascension",
+        "iconUrl": "/augments/Ascension3.png"
+    },
+    {
+        "name": "Final Reserves",
+        "iconUrl": "/augments/Final-Reserves-III.TFT_Set9.png"
+    },
+    {
+        "name": "Freljord Soul",
+        "iconUrl": "/augments/Freljord-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Giant Grab Bag",
+        "iconUrl": "/augments/Grab-Bag-III.TFT_Set9.png"
+    },
+    {
+        "name": "Golden Ticket",
+        "iconUrl": "/augments/GoldenTicket3.png"
+    },
+    {
+        "name": "Gotta Go Fast!!! III",
+        "iconUrl": "/augments/Gotta-Go-Fast-III.TFT_Set9.png"
+    },
+    {
+        "name": "Gunner Crown",
+        "iconUrl": "/augments/Gunner-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Harmacist III",
+        "iconUrl": "/augments/Harmacist-1-2-3-III.TFT_Set9.png"
+    },
+    {
+        "name": "Hedge Fund",
+        "iconUrl": "/augments/RichGetRicher3.png"
+    },
+    {
+        "name": "Impenetrable Bulwark",
+        "iconUrl": "/augments/StandBehind3.png"
+    },
+    {
+        "name": "Infernal Contract",
+        "iconUrl": "/augments/Infernal-Contract-III.TFT_Set9.png"
+    },
+    {
+        "name": "Invoker Crown",
+        "iconUrl": "/augments/Invoker-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Ionia Crown",
+        "iconUrl": "/augments/Ionia-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "It Pays to Learn III",
+        "iconUrl": "/augments/It-Pays-To-Learn-III.TFT_Set9.png"
+    },
+    {
+        "name": "Item Grab Bag III",
+        "iconUrl": "/augments/ItemGrabBag3.png"
+    },
+    {
+        "name": "Ixtal Soul",
+        "iconUrl": "/augments/Ixtal-Crown-III.TFT_Set9_Stage2.png"
+    },
+    {
+        "name": "Jeweled Lotus III",
+        "iconUrl": "/augments/Jeweled-Lotus-III.png"
+    },
+    {
+        "name": "Juggernaut Crown",
+        "iconUrl": "/augments/Juggernaut-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Knowledge Download III",
+        "iconUrl": "/augments/Knowledge-Download-III.TFT_Set9.png"
+    },
+    {
+        "name": "Large Forge",
+        "iconUrl": "/augments/Forge-III.TFT_Set9.png"
+    },
+    {
+        "name": "Level Up!",
+        "iconUrl": "/augments/LevelUp3.png"
+    },
+    {
+        "name": "Living Forge",
+        "iconUrl": "/augments/Living-Forge-III.png"
+    },
+    {
+        "name": "Lucky Gloves",
+        "iconUrl": "/augments/Lucky-Gloves-III.png"
+    },
+    {
+        "name": "March of Progress",
+        "iconUrl": "/augments/SlowAndSteady3.png"
+    },
+    {
+        "name": "Masterful Job",
+        "iconUrl": "/augments/Job_s-Done-III.TFT_Set9.png"
+    },
+    {
+        "name": "Multicaster Soul",
+        "iconUrl": "/augments/Multicaster-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Noxus Crown",
+        "iconUrl": "/augments/Noxus-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Overwhelming Force",
+        "iconUrl": "/augments/Eagle-Eye-III.TFT_Set9.png"
+    },
+    {
+        "name": "Pandora's Items III",
+        "iconUrl": "/augments/Pandora3.png"
+    },
+    {
+        "name": "Phreaky Friday",
+        "iconUrl": "/augments/Phreaky-Friday-III.TFT_Set9.png"
+    },
+    {
+        "name": "Piltover Soul",
+        "iconUrl": "/augments/Piltover-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Prismatic Legend",
+        "iconUrl": "/augments/Missing-T3.png"
+    },
+    {
+        "name": "Pumping Up III",
+        "iconUrl": "/augments/Pumping-Up-III.TFT_Set9.png"
+    },
+    {
+        "name": "Rogue Crown",
+        "iconUrl": "/augments/Rogue-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Roll The Dice",
+        "iconUrl": "/augments/Roll-the-Dice-III.TFT_Set9.png"
+    },
+    {
+        "name": "Rolling For Days III",
+        "iconUrl": "/augments/Rolling-For-Days-III.TFT_Set9.png"
+    },
+    {
+        "name": "Shopping Spree",
+        "iconUrl": "/augments/Trade3.png"
+    },
+    {
+        "name": "Shurima Crown",
+        "iconUrl": "/augments/Shurima-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Slayer Crown",
+        "iconUrl": "/augments/Slayer-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Social Distancing III",
+        "iconUrl": "/augments/Social-Distance-III.TFT_Set9.png"
+    },
+    {
+        "name": "Sorcerer Crown",
+        "iconUrl": "/augments/Sorcerer-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Spoils of War III",
+        "iconUrl": "/augments/Spoils-Of-War-Legend-III.TFT_Set9.png"
+    },
+    {
+        "name": "Starter Kit",
+        "iconUrl": "/augments/Starter-Kit-III.TFT_Set9.png"
+    },
+    {
+        "name": "Stationary Support III",
+        "iconUrl": "/augments/Stationary-Support-III.TFT_Set9_Stage2.png"
+    },
+    {
+        "name": "Strategist Soul",
+        "iconUrl": "/augments/Strategist-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Tactician's Tools",
+        "iconUrl": "/augments/Tactician_s-Tools-III.TFT_Set9.png"
+    },
+    {
+        "name": "Targon Soul",
+        "iconUrl": "/augments/Targon-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Teaming Up III",
+        "iconUrl": "/augments/Teaming-Up-III.TFT_Set9_Stage2.png"
+    },
+    {
+        "name": "The Golden Egg",
+        "iconUrl": "/augments/The-Golden-Egg-III.png"
+    },
+    {
+        "name": "Tiniest Titan",
+        "iconUrl": "/augments/Tiniest-TitanIII.TFT_Set9.png"
+    },
+    {
+        "name": "Tiny Power III",
+        "iconUrl": "/augments/Tiny-Power-III.TFT_Set9.png"
+    },
+    {
+        "name": "Training Reward III",
+        "iconUrl": "/augments/Training-Reward-III.TFT_Set9.png"
+    },
+    {
+        "name": "Transfusion III",
+        "iconUrl": "/augments/Transfusion-III.TFT_Set9.png"
+    },
+    {
+        "name": "Unleashed Arcana",
+        "iconUrl": "/augments/LifelongLearner3.png"
+    },
+    {
+        "name": "Urf's Grab Bag",
+        "iconUrl": "/augments/Grab-Bag-III.TFT_Set9.png"
+    },
+    {
+        "name": "Vanquisher Crown",
+        "iconUrl": "/augments/Vanquisher-Crown-III.TFT_Set9_Stage2.png"
+    },
+    {
+        "name": "Void Crown",
+        "iconUrl": "/augments/Void-Crown-III.TFT_Set9.png"
+    },
+    {
+        "name": "Wandering Trainer",
+        "iconUrl": "/augments/Wandering-Trainer-III.TFT_Set9.png"
+    },
+    {
+        "name": "Well-Earned Comforts III",
+        "iconUrl": "/augments/Well-Earned-Comforts-III.TFT_Set9.png"
+    },
+    {
+        "name": "Wellness Trust",
+        "iconUrl": "/augments/Money-Heals-all-Wounds-III.TFT_Set9.png"
+    },
+    {
+        "name": "What The Forge",
+        "iconUrl": "/augments/What-The-Forge-III.TFT_Set9.png"
+    },
+    {
+        "name": "Zaun Crown",
+        "iconUrl": "/augments/Zaun-Crown-III.TFT_Set9.png"
+    }
+]

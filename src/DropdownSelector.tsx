@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Autocomplete, TextField, ListItemText, ListItemAvatar, Avatar } from '@mui/material';
+import { Autocomplete, TextField, ListItemText, ListItemAvatar, Avatar, SelectChangeEvent } from '@mui/material';
+import {
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  List,
+  ListItem,
+} from '@mui/material';
 import ChampionIcon from './ChampionIcon';
 
 export interface Option {
@@ -9,11 +17,12 @@ export interface Option {
 
 interface DropdownSelectorProps {
     optionsFilePath: string; // Path to the JSON file with options
+    selectedOptions: Option[];
+    onSelectedOptionsChange: (newSelectedOptions: Option[]) => void;
   }
 
-const DropdownSelector: React.FC<DropdownSelectorProps> = ({ optionsFilePath }) => {
+const DropdownSelector: React.FC<DropdownSelectorProps> = ({ optionsFilePath, selectedOptions, onSelectedOptionsChange }) => {
   const [options, setOptions] = useState<Option[]>([]);
-  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
   useEffect(() => {
     // Fetch and parse the JSON file
@@ -38,32 +47,69 @@ const DropdownSelector: React.FC<DropdownSelectorProps> = ({ optionsFilePath }) 
 
   }, [optionsFilePath]);
 
-  const handleOptionSelect = (option: Option | null) => {
-    setSelectedOption(option);
-  };
+  const handleOptionSelect = (event: SelectChangeEvent<string[]>) => {
+    const value = event.target.value[event.target.value.length - 1];
+    console.log(value)
+    const selectedOption = options.find((option) => option.name === value);
 
+    if (selectedOption) {
+      console.log(selectedOption)
+      const newSelectedOptions = [...selectedOptions, selectedOption];
+      onSelectedOptionsChange(newSelectedOptions); // Update selectedOptions in the parent component
+    }
+
+    console.log(selectedOptions)
+  };
+    // BUGGED AF RIGHT NOW, IF U KEEP CLICKING THE SAME ONES IT BUGS OUT LIKE CRAZY
   return (
     <div>
-    <Autocomplete
-      sx={{ width: 300 }} // Apply styling to the Autocomplete component
-      options={options}
-      getOptionLabel={(option: Option) => option.name}
-      onChange={(event, newValue) => handleOptionSelect(newValue)}
-      renderInput={(params) => (
-        <TextField {...params} label="Select..." variant="outlined" />
+    <FormControl>
+        <Select
+          multiple
+          value={selectedOptions.map((option) => option.name)}
+          onChange={handleOptionSelect}
+          renderValue={(selected) => (
+            <div>
+
+              {selected.map((value) => (
+                <span key={value}>{value},</span>
+              ))}
+            </div>
+          )}
+          sx={{
+            width: '450px', // Set the desired width
+            height: '40px', // Set the desired height
+          }}
+        >
+          {options.map((option) => (
+            <MenuItem key={option.name} value={option.name}>
+              <img
+                src={option.iconUrl}
+                alt={option.name}
+                style={{width:'32px', height: '32px', marginRight: '8px'}}
+              />
+              {option.name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+
+      {selectedOptions.length > 0 && (
+        <List>
+          {selectedOptions.map((selectedOption, index) => (
+            <ListItem key={index}>
+              {selectedOption.iconUrl && (
+                <img
+                  src={selectedOption.iconUrl}
+                  alt={selectedOption.name}
+                  style={{ width: '120px', height: '120px', marginRight: '8px' }}
+                />
+              )}
+              {selectedOption.name}
+            </ListItem>
+          ))}
+        </List>
       )}
-      renderOption={(props, option: Option) => (
-        <li {...props}>
-          <ListItemAvatar>
-            <Avatar src={option.iconUrl} alt={option.name} />
-          </ListItemAvatar>
-          <ListItemText primary={option.name} />
-        </li>
-      )}
-    />
-    {selectedOption && (
-      <ChampionIcon imageUrl={selectedOption.iconUrl} />
-    )}
     </div>
   );
 };
