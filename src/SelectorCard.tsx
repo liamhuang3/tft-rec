@@ -3,7 +3,7 @@ import { Grid, Card, CardContent, Typography, Button, ToggleButton, ToggleButton
 import DropdownSelector from './DropdownSelector'
 import RecommendationCard from './RecommendationCard';
 import { Option } from './DropdownSelector';
-import { RiotAPI, RiotAPITypes, PlatformId } from '@fightmegg/riot-api'
+import { getSummoners } from './apiFunctions';
 
 const SelectorCard: React.FC = () => {
     const [showRecommendation, setShowRecommendation] = useState(false);
@@ -14,6 +14,7 @@ const SelectorCard: React.FC = () => {
     const [selectedChampionCategory, setChampionCategory] = useState<string | null>('1 Cost');
     const [selectedAugmentCategory, setAugmentCategory] = useState<string | null>('Silver');
 
+    const apiKey = process.env.REACT_APP_RIOT_API_KEY;
     const handleSelectedChampionsChange = (newSelected: Option[]) => {
         setSelectedChampions(newSelected);
     };
@@ -44,14 +45,7 @@ const SelectorCard: React.FC = () => {
         }
       };
     const handleRecommendClick = () => {
-        (async () => {
-            const rAPI = new RiotAPI('');
-        
-            const summoner = await rAPI.summoner.getBySummonerName({
-                region: PlatformId.NA1,
-                summonerName: "chillycakes",
-              });
-        })()
+        getSummoners()
         // When the "Recommend" button is clicked, set showRecommendation to true
         setShowRecommendation(true);
     };
