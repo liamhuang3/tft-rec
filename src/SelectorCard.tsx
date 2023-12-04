@@ -3,7 +3,7 @@ import { Grid, Card, CardContent, Typography, Button, ToggleButton, ToggleButton
 import DropdownSelector from './DropdownSelector'
 import RecommendationCard from './RecommendationCard';
 import { Option } from './DropdownSelector';
-import { getSummoners } from './apiFunctions';
+import { getStats } from './apiFunctions';
 
 const SelectorCard: React.FC = () => {
     const [showRecommendation, setShowRecommendation] = useState(false);
@@ -45,7 +45,7 @@ const SelectorCard: React.FC = () => {
         }
       };
     const handleRecommendClick = () => {
-        getSummoners()
+        getStats()
         // When the "Recommend" button is clicked, set showRecommendation to true
         setShowRecommendation(true);
     };
