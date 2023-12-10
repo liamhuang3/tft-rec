@@ -62,24 +62,20 @@ const DropdownSelector: React.FC<DropdownSelectorProps> = ({ optionsFilePath, se
   };
     // BUGGED AF RIGHT NOW, IF U KEEP CLICKING THE SAME ONES IT BUGS OUT LIKE CRAZY
   return (
-    <div>
-    <FormControl>
+    <div style={{ width: '100%' }}>
+    <FormControl fullWidth>
         <Select
           multiple
           value={selectedOptions.map((option) => option.name)}
           onChange={handleOptionSelect}
           renderValue={(selected) => (
             <div>
-
               {selected.map((value) => (
                 <span key={value}>{value},</span>
               ))}
             </div>
           )}
-          sx={{
-            width: '450px', // Set the desired width
-            height: '40px', // Set the desired height
-          }}
+          style={{ width: '100%', height: '40px' }}
         >
           {options.map((option) => (
             <MenuItem key={option.name} value={option.name}>

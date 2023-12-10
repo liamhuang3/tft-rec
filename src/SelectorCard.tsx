@@ -14,7 +14,6 @@ const SelectorCard: React.FC = () => {
     const [selectedChampionCategory, setChampionCategory] = useState<string | null>('1 Cost');
     const [selectedAugmentCategory, setAugmentCategory] = useState<string | null>('Silver');
 
-    const apiKey = process.env.REACT_APP_RIOT_API_KEY;
     const handleSelectedChampionsChange = (newSelected: Option[]) => {
         setSelectedChampions(newSelected);
     };
@@ -54,11 +53,10 @@ const SelectorCard: React.FC = () => {
         <div>
             <Card sx={{ mt: '32px', mx: '32px' }}>
                 <CardContent>
-                    <Typography variant="h3">Select</Typography>
                     <div>
                     <Grid container spacing={3}>
-                        <Grid item xs={4} sx={{borderRight: '1px solid'}}>
-                            <Grid container spacing={2}>
+                        <Grid item xs={4}>
+                            <Grid container alignItems="center" justifyContent="center" spacing={2}>
                                 <Grid item xs={3}>
                                     <Typography sx={{my: '8px'}}>Champions</Typography>
                                 </Grid>
@@ -87,17 +85,19 @@ const SelectorCard: React.FC = () => {
                                     </ToggleButtonGroup>
                                 </Grid>
                             </Grid>
-                            <DropdownSelector 
-                                optionsFilePath='/test.json'
-                                selectedOptions={selectedChampions} 
-                                onSelectedOptionsChange={handleSelectedChampionsChange}/>
+                            <div style={{ width: '100%', marginTop: '16px'}}>
+                                <DropdownSelector 
+                                    optionsFilePath='/test.json'
+                                    selectedOptions={selectedChampions} 
+                                    onSelectedOptionsChange={handleSelectedChampionsChange}/>
+                            </div>
                         </Grid>
-                        <Grid item xs={4} sx={{borderRight: '1px solid'}}>
-                            <Grid container spacing={2}>
-                                <Grid item xs={4}>
+                        <Grid item xs={4}>
+                            <Grid container alignItems="center" justifyContent="center" spacing={2}>
+                                <Grid item xs={3}>
                                     <Typography sx={{my: '8px'}}>Items</Typography>
                                 </Grid>
-                                <Grid item xs={8}>
+                                <Grid item xs={9}>
                                 <ToggleButtonGroup
                                     value={selectedItemCategory}
                                     exclusive
@@ -116,7 +116,7 @@ const SelectorCard: React.FC = () => {
                                 </ToggleButtonGroup>
                                 </Grid>
                             </Grid>
-                            <div style={{ marginTop: '16px'}}>
+                            <div style={{ width: '100%', marginTop: '16px'}}>
                                 <DropdownSelector 
                                     optionsFilePath='/tft-item-components.json'
                                     selectedOptions={selectedItems} 
@@ -124,7 +124,7 @@ const SelectorCard: React.FC = () => {
                             </div>
                         </Grid>
                         <Grid item xs={4}>
-                            <Grid container spacing={2}>
+                            <Grid container alignItems="center" justifyContent="center" spacing={2}>
                                 <Grid item xs={4}>
                                     <Typography sx={{my: '8px'}}>Augments</Typography>
                                 </Grid>
@@ -147,21 +147,23 @@ const SelectorCard: React.FC = () => {
                                 </ToggleButtonGroup>
                                 </Grid>
                             </Grid>
-                            {selectedAugmentCategory === "Prismatic" && 
-                            <DropdownSelector 
-                            optionsFilePath='/tft-augments-prismatic.json'
-                            selectedOptions={selectedAugments} 
-                            onSelectedOptionsChange={handleSelectedAugmentsChange}/>}
-                            {selectedAugmentCategory === "Gold" && 
-                            <DropdownSelector 
-                            optionsFilePath='/tft-augments-silver.json'
-                            selectedOptions={selectedAugments} 
-                            onSelectedOptionsChange={handleSelectedAugmentsChange}/>}
-                            {selectedAugmentCategory === "Silver" && 
-                            <DropdownSelector 
-                            optionsFilePath='/tft-augments-silver.json'
-                            selectedOptions={selectedAugments} 
-                            onSelectedOptionsChange={handleSelectedAugmentsChange}/>}
+                            <div style={{ width: '100%', marginTop: '16px'}}>
+                                {selectedAugmentCategory === "Prismatic" && 
+                                <DropdownSelector 
+                                optionsFilePath='/tft-augments-prismatic.json'
+                                selectedOptions={selectedAugments} 
+                                onSelectedOptionsChange={handleSelectedAugmentsChange}/>}
+                                {selectedAugmentCategory === "Gold" && 
+                                <DropdownSelector 
+                                optionsFilePath='/tft-augments-silver.json'
+                                selectedOptions={selectedAugments} 
+                                onSelectedOptionsChange={handleSelectedAugmentsChange}/>}
+                                {selectedAugmentCategory === "Silver" && 
+                                <DropdownSelector 
+                                optionsFilePath='/tft-augments-silver.json'
+                                selectedOptions={selectedAugments} 
+                                onSelectedOptionsChange={handleSelectedAugmentsChange}/>}
+                            </div>
                         </Grid>
                     </Grid>
                     </div>
