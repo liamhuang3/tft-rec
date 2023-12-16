@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Grid, Card, CardContent, Typography, Button, ToggleButton, ToggleButtonGroup } from '@mui/material';
+import React, { useState } from 'react';
+import { Grid, Card, CardContent, Typography, Button, ToggleButton, ToggleButtonGroup, CircularProgress } from '@mui/material';
 import DropdownSelector from './DropdownSelector'
 import RecommendationCard from './RecommendationCard';
 import { Option } from './DropdownSelector';
@@ -13,6 +13,7 @@ const SelectorCard: React.FC = () => {
     const [selectedItemCategory, setItemCategory] = useState<string | null>('Components');
     const [selectedChampionCategory, setChampionCategory] = useState<string | null>('1 Cost');
     const [selectedAugmentCategory, setAugmentCategory] = useState<string | null>('Silver');
+    const [loading, setLoading] = useState(false);
 
     const handleSelectedChampionsChange = (newSelected: Option[]) => {
         setSelectedChampions(newSelected);
@@ -43,9 +44,12 @@ const SelectorCard: React.FC = () => {
             setAugmentCategory(newCategory);
         }
       };
-    const handleRecommendClick = () => {
-        getStats()
+    
+    const handleRecommendClick = async () => {
+        setLoading(true)
+        await getStats()
         // When the "Recommend" button is clicked, set showRecommendation to true
+        setLoading(false);
         setShowRecommendation(true);
     };
 
@@ -172,9 +176,15 @@ const SelectorCard: React.FC = () => {
                     </div>
                 </CardContent>
             </Card>
-            {showRecommendation && (
-                <RecommendationCard championsList={selectedChampions} itemsList={selectedItems} augmentsList={selectedAugments}></RecommendationCard>
-            )}
+                { loading && (
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+                        <CircularProgress />
+                        <Typography>Loading...</Typography>
+                    </div>
+                )}
+                {showRecommendation && (
+                    <RecommendationCard championsList={selectedChampions} itemsList={selectedItems} augmentsList={selectedAugments}></RecommendationCard>
+                )}
         </div>
     )
 }

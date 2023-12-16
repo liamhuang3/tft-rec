@@ -6,12 +6,10 @@ import three_img from './assets/3_trans.png';
 import { Option } from './DropdownSelector';
 
 interface RecommendationCardProps {
-    championsList: Option[];
-    itemsList: Option[];
-    augmentsList: Option[];
+    compsList: [];
   }
 
-const RecommendationCard: React.FC<RecommendationCardProps> = ({ championsList, itemsList, augmentsList }) => {
+const RecommendationCard: React.FC<RecommendationCardProps> = ({ compsList }) => {
     return(
         <div>
            <Card sx={{ mt: '16px', mx: '32px' }}>
