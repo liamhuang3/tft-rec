@@ -6,7 +6,7 @@ import three_img from './assets/3_trans.png';
 import { Option } from './DropdownSelector';
 
 interface RecommendationCardProps {
-    compsList: [];
+    compsList: Object[];
   }
 
 const RecommendationCard: React.FC<RecommendationCardProps> = ({ compsList }) => {

@@ -3,7 +3,7 @@ import { Grid, Card, CardContent, Typography, Button, ToggleButton, ToggleButton
 import DropdownSelector from './DropdownSelector'
 import RecommendationCard from './RecommendationCard';
 import { Option } from './DropdownSelector';
-import { getStats } from './apiFunctions';
+import { getRecommendations, getStats } from './apiFunctions';
 
 const SelectorCard: React.FC = () => {
     const [showRecommendation, setShowRecommendation] = useState(false);
@@ -14,6 +14,7 @@ const SelectorCard: React.FC = () => {
     const [selectedChampionCategory, setChampionCategory] = useState<string | null>('1 Cost');
     const [selectedAugmentCategory, setAugmentCategory] = useState<string | null>('Silver');
     const [loading, setLoading] = useState(false);
+    const [compList, setCompList] = useState<Object[]>([]);
 
     const handleSelectedChampionsChange = (newSelected: Option[]) => {
         setSelectedChampions(newSelected);
@@ -47,8 +48,11 @@ const SelectorCard: React.FC = () => {
     
     const handleRecommendClick = async () => {
         setLoading(true)
-        await getStats()
+        let stats = await getStats()
         // When the "Recommend" button is clicked, set showRecommendation to true
+
+        const userInput = [...selectedChampions, ...selectedItems, ...selectedAugments]
+        setCompList(await getRecommendations(userInput, stats))
         setLoading(false);
         setShowRecommendation(true);
     };
@@ -183,8 +187,8 @@ const SelectorCard: React.FC = () => {
                     </div>
                 )}
                 {showRecommendation && (
-                    <RecommendationCard championsList={selectedChampions} itemsList={selectedItems} augmentsList={selectedAugments}></RecommendationCard>
-                )}
+                    <RecommendationCard compsList={compList}></RecommendationCard>
+                )} 
         </div>
     )
 }

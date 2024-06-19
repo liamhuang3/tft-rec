@@ -10,22 +10,22 @@ async function getSummoners() {
     // RATE LIMIT FOR API IS 100 PER 2 MINUTES...
     // get the summoner names from challenger and grandmaster
     const challengerResponse = await http.get('https://na1.api.riotgames.com/tft/league/v1/challenger?queue=RANKED_TFT&api_key=' + apiKey)
-    const challengerSummoners = challengerResponse.data['entries'].map(obj => obj['summonerName']);
+    const challengerSummoners = challengerResponse.data['entries'].map(obj => obj['summonerId']);
 
     // const gmResponse= await http.get('https://na1.api.riotgames.com/tft/league/v1/grandmaster?queue=RANKED_TFT&api_key=' + apiKey)
     // const gmSummoners = gmResponse.data['entries'].map(obj => obj['summonerName']);
-
     return challengerSummoners   // .concat(gmSummoners)
 }
 
-async function getPuuids(summonerNames = []) {
+async function getPuuids(summonerIds = []) {
     // limit 20
     let puuids = []
 
-    console.log(summonerNames)
-    for (let i = 0; i < Math.min(20, summonerNames.length); i++){
-        const summInfo = await http.get('https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/' + summonerNames[i] + '?api_key=' + apiKey)
-        puuids.push(summInfo.data['puuid'])
+    console.log(summonerIds)
+    for (let i = 0; i < Math.min(20, summonerIds.length); i++){
+        const summInfo = await http.get('https://na1.api.riotgames.com/tft/league/v1/entries/by-summoner/' + summonerIds[i] + '?api_key=' + apiKey)
+        console.log(summInfo)
+        puuids.push(summInfo.data[0]['puuid'])
     }
     return puuids
 }
@@ -36,6 +36,7 @@ async function getMatchIds(puuids = []){
     let startTime = (new Date("2023-11-21").valueOf()) / 1000
     let matchIds = []
 
+    console.log(puuids)
     for (let i = 0; i < puuids.length; i++){
         const matchId = await http.get('https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/' + puuids[i] + '/ids?start=0&startTime=' + startTime + '&count=1&api_key=' + apiKey)
         matchIds = matchIds.concat(matchId.data)
@@ -111,7 +112,6 @@ export async function getRecommendations(userInput = [], compArray = []){
     // no need to split up items, champs, augments, we just go for total matching
     let numMatching = []
 
-
     for (const comp of compArray) {
         let mergedComp = [
             ...comp.champions,
@@ -119,7 +119,8 @@ export async function getRecommendations(userInput = [], compArray = []){
             ...comp.augments,
         ]
 
-        const matchingCount = userInput.filter(value => mergedComp.includes(value)).length;
+        const userInputStrings = userInput.map(item => item.name);
+        const matchingCount = userInputStrings.filter(value => mergedComp.includes(value)).length;
 
         numMatching.push({ index: compArray.indexOf(comp), count: matchingCount });
     }
