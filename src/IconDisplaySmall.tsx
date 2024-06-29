@@ -15,7 +15,8 @@ const IconDisplaySmall: React.FC<IconDisplaySmallProps> = ({ iconUrls, sideLengt
                     style={{
                         width: sideLength,
                         height: sideLength,
-                        marginRight: 2, // Adjust the spacing between images
+                        marginRight: 8, // Adjust the spacing between images
+                        marginBottom: 12,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'

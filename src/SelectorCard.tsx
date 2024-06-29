@@ -4,6 +4,7 @@ import DropdownSelector from './DropdownSelector'
 import RecommendationCard from './RecommendationCard';
 import { Option } from './DropdownSelector';
 import { getRecommendations, getStats } from './apiFunctions';
+import { compsInter } from './RecommendationCard';
 
 const SelectorCard: React.FC = () => {
     const [showRecommendation, setShowRecommendation] = useState(false);
@@ -14,7 +15,7 @@ const SelectorCard: React.FC = () => {
     const [selectedChampionCategory, setChampionCategory] = useState<string | null>('1 Cost');
     const [selectedAugmentCategory, setAugmentCategory] = useState<string | null>('Silver');
     const [loading, setLoading] = useState(false);
-    const [compList, setCompList] = useState<Object[]>([]);
+    const [compList, setCompList] = useState<compsInter[]>([]);
 
     const handleSelectedChampionsChange = (newSelected: Option[]) => {
         setSelectedChampions(newSelected);

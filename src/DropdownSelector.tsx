@@ -8,7 +8,6 @@ import {
   List,
   ListItem,
 } from '@mui/material';
-import ChampionIcon from './ChampionIcon';
 
 export interface Option {
   name: string;
@@ -36,7 +35,7 @@ const DropdownSelector: React.FC<DropdownSelectorProps> = ({ optionsFilePath, se
           var option: Option = {name: item.name, iconUrl: item.iconUrl}
           uniqueOptions.add(option);
         });
-        //set the shit
+        //set it
 
         // Convert the Set back to an array
         const uniqueOptionsArray = Array.from(uniqueOptions);
