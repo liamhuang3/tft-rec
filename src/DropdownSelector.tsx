@@ -16,12 +16,17 @@ export interface Option {
 
 interface DropdownSelectorProps {
     optionsFilePath: string; // Path to the JSON file with options
+    selectedCategory: Number;
+    selectedTier: Number;
     selectedOptions: Option[];
     onSelectedOptionsChange: (newSelectedOptions: Option[]) => void;
   }
 
-const DropdownSelector: React.FC<DropdownSelectorProps> = ({ optionsFilePath, selectedOptions, onSelectedOptionsChange }) => {
+const DropdownSelector: React.FC<DropdownSelectorProps> = ({ optionsFilePath, selectedCategory, selectedTier, selectedOptions, onSelectedOptionsChange }) => {
   const [options, setOptions] = useState<Option[]>([]);
+  const CHAMPIONS = 1;
+  const ITEMS = 2;
+  const AUGMENTS = 3;
 
   useEffect(() => {
     // Fetch and parse the JSON file
@@ -31,8 +36,13 @@ const DropdownSelector: React.FC<DropdownSelectorProps> = ({ optionsFilePath, se
         const uniqueOptions = new Set<Option>();
 
         // Extract and add each option name to the Set
-        Object.values(data).forEach((item: any) => {
-          var option: Option = {name: item.name, iconUrl: item.iconUrl}
+        Object.values(data['data']).forEach((item: any) => {
+          if (selectedCategory == CHAMPIONS) {
+            if (selectedTier != item.tier) {
+              return; //skip if not in the correct tier
+            }
+          }
+          var option: Option = {name: item.name, iconUrl: item.image.full}
           uniqueOptions.add(option);
         });
         //set it

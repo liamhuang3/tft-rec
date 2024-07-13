@@ -5,6 +5,7 @@ import RecommendationCard from './RecommendationCard';
 import { Option } from './DropdownSelector';
 import { getRecommendations, getStats } from './apiFunctions';
 import { compsInter } from './RecommendationCard';
+import championData from '../public/tft-champion.json'
 
 const SelectorCard: React.FC = () => {
     const [showRecommendation, setShowRecommendation] = useState(false);
