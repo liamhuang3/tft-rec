@@ -42,7 +42,19 @@ const DropdownSelector: React.FC<DropdownSelectorProps> = ({ optionsFilePath, se
               return; //skip if not in the correct tier
             }
           }
-          var option: Option = {name: item.name, iconUrl: item.image.full}
+          // TODO: add the full path to the image
+          let imagePath: string;
+          switch (selectedCategory){
+            case CHAMPIONS:
+              imagePath = "/champions_square/" + item.image.full;
+              break;
+            case ITEMS:
+              imagePath = "/items/" + item.image.full;
+              break;
+            default:
+              imagePath = "/augments/" + item.image.full;
+          }
+          var option: Option = {name: item.name, iconUrl: imagePath}
           uniqueOptions.add(option);
         });
         //set it
@@ -54,7 +66,7 @@ const DropdownSelector: React.FC<DropdownSelectorProps> = ({ optionsFilePath, se
       })
       .catch((error) => console.error('Error fetching JSON:', error));
 
-  }, [optionsFilePath]);
+  }, [optionsFilePath, selectedTier]);
 
   const handleOptionSelect = (event: SelectChangeEvent<string[]>) => {
     const value = event.target.value[event.target.value.length - 1];

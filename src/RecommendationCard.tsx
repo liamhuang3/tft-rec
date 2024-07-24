@@ -1,5 +1,5 @@
 import { Card, CardContent, Container, Typography, Divider, Grid } from '@mui/material';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import one_img from './assets/1_trans.png';
 import two_img from './assets/2_trans.png';
 import three_img from './assets/3_trans.png';
@@ -8,26 +8,42 @@ import ChampionIcon from './ChampionIcon';
 import IconDisplaySmall from './IconDisplaySmall';
 
 export interface compsInter {
-    champions: String[],
-    items: String[],
-    augments: String[],
-    traits: String[]
+    champions: string[],
+    items: string[],
+    augments: string[],
+    traits: string[]
 }
 interface RecommendationCardProps {
     compsList: compsInter[];
   }
-// fuck bruh i gotta define an interface for it...
+
 const RecommendationCard: React.FC<RecommendationCardProps> = ({ compsList }) => {
+    const [updatedCompsList, setUpdatedCompsList] = useState<compsInter[]>([]);
+
     useEffect(() => {
-        console.log(compsList);
-      });
+        console.log("useffect run")
+        let newCompsList = compsList;
+        for (let i = 0; i < newCompsList.length; i++) {
+            for (let j = 0; j < newCompsList[i].champions.length; j++) {
+                newCompsList[i].champions[j] = '/champions_square/' + newCompsList[i].champions[j] + '.TFT_Set11.png'
+            }
+            for (let j = 0; j < newCompsList[i].items.length; j++) {
+                newCompsList[i].items[j] = '/items/' + newCompsList[i].items[j] + '.png'
+            }
+            for (let j = 0; j < newCompsList[i].augments.length; j++) {
+                newCompsList[i].augments[j] = '/augments/' + newCompsList[i].augments[j] + '.png'
+            }
+        }
+
+        setUpdatedCompsList(newCompsList);
+      }, [compsList]);
 
     return (
         <div>
             <Card sx={{ mt: '16px', mx: '32px' }}>
                 <CardContent>
                     <Typography variant="h5">Recommended Compositions</Typography>
-                    {compsList.map((comp, index) => (
+                    {updatedCompsList.map((comp, index) => (
                         <div key={index}>
                             <Divider sx={{ my: 2 }} />
                             <div>
@@ -41,7 +57,7 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ compsList }) =>
                                 </Grid>
                                 <div>
                                     <Typography variant="h5" sx={{ my: 2 }}>Champions</Typography>
-                                        <IconDisplaySmall iconUrls={["/champions/aatrox.png", "/champions/ahri.png"]} sideLength={40}></IconDisplaySmall>
+                                        <IconDisplaySmall iconUrls={comp.champions} sideLength={40}></IconDisplaySmall>
                                         {/* {comp.champions.map(champ => (
                                             
                                         ))
@@ -49,10 +65,10 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ compsList }) =>
                                         } */}
                                     <Divider sx={{ my: 1 }} />
                                     <Typography variant="h5" sx={{ my: 2 }}>Items</Typography>
-                                        <IconDisplaySmall iconUrls={["/items/TFT_Item_BFSword.png", "/items/TFT_Item_ChainVest.png"]} sideLength={40}></IconDisplaySmall>
+                                        <IconDisplaySmall iconUrls={comp.items} sideLength={40}></IconDisplaySmall>
                                     <Divider sx={{ my: 1 }} />
                                     <Typography variant="h5" sx={{ my: 2 }}>Augments</Typography>
-                                        <IconDisplaySmall iconUrls={["/augments/AFK-I.png", "/augments/Battle-Ready-III.TFT_Set9.png"]} sideLength={40}></IconDisplaySmall>
+                                        <IconDisplaySmall iconUrls={comp.augments} sideLength={40}></IconDisplaySmall>
                                 </div>
                             </div>
                         </div>

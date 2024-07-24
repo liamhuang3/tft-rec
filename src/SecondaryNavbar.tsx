@@ -5,7 +5,7 @@ import Tooltip from '@mui/material/Tooltip';
 const SecondaryNavbar: React.FC = () => {
 
   return (
-    <AppBar position="sticky" sx={{ top: '64px' }}>
+    <AppBar position="sticky" sx={{ top: '100px' }}>
       <Toolbar>
         <Button color="inherit">Comp Recommender</Button>
         <Tooltip title="Coming soon!" arrow>

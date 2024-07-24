@@ -3,13 +3,26 @@ import { makeStyles, Avatar } from '@mui/material';
 
 interface ChampionIconProps {
   imageUrl?: string; // The URL of the image to be displayed
+  x: number;
+  y: number;
+  w: number;
+  h: number;
 }
 
 
-const ChampionIcon: React.FC<ChampionIconProps> = ({ imageUrl }) => {
+const ChampionIcon: React.FC<ChampionIconProps> = ({ imageUrl, x, y, w, h }) => {
 
   return (
-    <Avatar alt="User Avatar" src={imageUrl} sx={{width: 100, height:100}} />
+    <div
+      className="image-section"
+      style={{
+        width: `${w}px`,
+        height: `${h}px`,
+        backgroundImage: `url(${imageUrl})`,
+        backgroundPosition: `-${x}px -${y}px`,
+      }}
+    ></div>
+    
   );
 };
 

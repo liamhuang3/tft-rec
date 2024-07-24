@@ -21,10 +21,9 @@ async function getPuuids(summonerIds = []) {
     // limit 20
     let puuids = []
 
-    console.log(summonerIds)
+    // console.log(summonerIds)
     for (let i = 0; i < Math.min(20, summonerIds.length); i++){
         const summInfo = await http.get('https://na1.api.riotgames.com/tft/league/v1/entries/by-summoner/' + summonerIds[i] + '?api_key=' + apiKey)
-        console.log(summInfo)
         puuids.push(summInfo.data[0]['puuid'])
     }
     return puuids
@@ -36,7 +35,6 @@ async function getMatchIds(puuids = []){
     let startTime = (new Date("2023-11-21").valueOf()) / 1000
     let matchIds = []
 
-    console.log(puuids)
     for (let i = 0; i < puuids.length; i++){
         const matchId = await http.get('https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/' + puuids[i] + '/ids?start=0&startTime=' + startTime + '&count=1&api_key=' + apiKey)
         matchIds = matchIds.concat(matchId.data)
@@ -95,8 +93,6 @@ export async function getStats(){
             comps.push(comp)
         }
     }
-
-    console.log(comps)
     
     return comps
     //bet it works

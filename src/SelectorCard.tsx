@@ -12,9 +12,9 @@ const SelectorCard: React.FC = () => {
     const [selectedChampions, setSelectedChampions] = useState<Option[]>([]);
     const [selectedItems, setSelectedItems] = useState<Option[]>([]);
     const [selectedAugments, setSelectedAugments] = useState<Option[]>([]);
-    const [selectedItemCategory, setItemCategory] = useState<string | null>('Components');
-    const [selectedChampionCategory, setChampionCategory] = useState<string | null>('1 Cost');
-    const [selectedAugmentCategory, setAugmentCategory] = useState<string | null>('Silver');
+    //const [selectedItemCategory, setItemCategory] = useState<string | null>('Components');
+    const [selectedChampionCategory, setChampionCategory] = useState<Number>(1);
+    //const [selectedAugmentCategory, setAugmentCategory] = useState<string | null>('Silver');
     const [loading, setLoading] = useState(false);
     const [compList, setCompList] = useState<compsInter[]>([]);
 
@@ -30,30 +30,31 @@ const SelectorCard: React.FC = () => {
         setSelectedAugments(newSelected);
     };
 
-    const handleItemCategoryChange = (event: React.MouseEvent<HTMLElement>, newCategory: string | null) => {
-        if (newCategory !== null) {
-            setItemCategory(newCategory);
-        }
-      };
+    // const handleItemCategoryChange = (event: React.MouseEvent<HTMLElement>, newCategory: string | null) => {
+    //     if (newCategory !== null) {
+    //         setItemCategory(newCategory);
+    //     }
+    //   };
 
-      const handleChampionCategoryChange = (event: React.MouseEvent<HTMLElement>, newCategory: string | null) => {
+      const handleChampionCategoryChange = (event: React.MouseEvent<HTMLElement>, newCategory: Number | null) => {
         if (newCategory !== null) {
+            console.log(newCategory)
             setChampionCategory(newCategory);
         }
       };
 
-      const handleAugmentCategoryChange = (event: React.MouseEvent<HTMLElement>, newCategory: string | null) => {
-        if (newCategory !== null) {
-            setAugmentCategory(newCategory);
-        }
-      };
+    //   const handleAugmentCategoryChange = (event: React.MouseEvent<HTMLElement>, newCategory: string | null) => {
+    //     if (newCategory !== null) {
+    //         setAugmentCategory(newCategory);
+    //     }
+    //   };
     
     const handleRecommendClick = async () => {
         setLoading(true)
         let stats = await getStats()
-        // When the "Recommend" button is clicked, set showRecommendation to true
 
         const userInput = [...selectedChampions, ...selectedItems, ...selectedAugments]
+        console.log(userInput)
         setCompList(await getRecommendations(userInput, stats))
         setLoading(false);
         setShowRecommendation(true);
@@ -77,19 +78,19 @@ const SelectorCard: React.FC = () => {
                                         onChange={handleChampionCategoryChange}
                                         aria-label="toggle options"
                                     >
-                                        <ToggleButton value="1 Cost" aria-label="onecost">
+                                        <ToggleButton value={1} aria-label="onecost">
                                         1 Cost
                                         </ToggleButton>
-                                        <ToggleButton value="2 Cost" aria-label="twocost">
+                                        <ToggleButton value={2} aria-label="twocost">
                                         2 Cost
                                         </ToggleButton>
-                                        <ToggleButton value="3 Cost" aria-label="threecost">
+                                        <ToggleButton value={3} aria-label="threecost">
                                         3 Cost
                                         </ToggleButton>
-                                        <ToggleButton value="4 Cost" aria-label="fourcost">
+                                        <ToggleButton value={4} aria-label="fourcost">
                                         4 Cost
                                         </ToggleButton>
-                                        <ToggleButton value="5 Cost" aria-label="fivecost">
+                                        <ToggleButton value={5} aria-label="fivecost">
                                         5 Cost
                                         </ToggleButton>
                                     </ToggleButtonGroup>
@@ -97,17 +98,19 @@ const SelectorCard: React.FC = () => {
                             </Grid>
                             <div style={{ width: '100%', marginTop: '16px'}}>
                                 <DropdownSelector 
-                                    optionsFilePath='/test.json'
+                                    optionsFilePath='/tft-champion.json'
+                                    selectedCategory={1}
+                                    selectedTier={selectedChampionCategory}
                                     selectedOptions={selectedChampions} 
                                     onSelectedOptionsChange={handleSelectedChampionsChange}/>
                             </div>
                         </Grid>
                         <Grid item xs={4}>
                             <Grid container alignItems="center" justifyContent="center" spacing={2}>
-                                <Grid item xs={3}>
+                                <Grid item xs={12}>
                                     <Typography sx={{my: '8px'}}>Items</Typography>
                                 </Grid>
-                                <Grid item xs={9}>
+                                {/* <Grid item xs={9}>
                                 <ToggleButtonGroup
                                     value={selectedItemCategory}
                                     exclusive
@@ -124,22 +127,24 @@ const SelectorCard: React.FC = () => {
                                     Emblems
                                     </ToggleButton>
                                 </ToggleButtonGroup>
-                                </Grid>
+                                </Grid> */}
                             </Grid>
-                            <div style={{ width: '100%', marginTop: '16px'}}>
+                            <div style={{ width: '100%', marginTop: '24px'}}>
                                 <DropdownSelector 
-                                    optionsFilePath='/tft-item-components.json'
+                                    optionsFilePath='/tft-item.json'
+                                    selectedCategory={2}
+                                    selectedTier={1}
                                     selectedOptions={selectedItems} 
                                     onSelectedOptionsChange={handleSelectedItemsChange}/>
                             </div>
                         </Grid>
                         <Grid item xs={4}>
                             <Grid container alignItems="center" justifyContent="center" spacing={2}>
-                                <Grid item xs={4}>
+                                <Grid item xs={12}>
                                     <Typography sx={{my: '8px'}}>Augments</Typography>
                                 </Grid>
-                                <Grid item xs={8}>
-                                <ToggleButtonGroup
+                                {/*<Grid item xs={8}>
+                                 <ToggleButtonGroup
                                     value={selectedAugmentCategory}
                                     exclusive
                                     onChange={handleAugmentCategoryChange}
@@ -155,10 +160,10 @@ const SelectorCard: React.FC = () => {
                                     Prismatic
                                     </ToggleButton>
                                 </ToggleButtonGroup>
-                                </Grid>
+                                </Grid> */}
                             </Grid>
-                            <div style={{ width: '100%', marginTop: '16px'}}>
-                                {selectedAugmentCategory === "Prismatic" && 
+                            <div style={{ width: '100%', marginTop: '24px'}}>
+                                {/* {selectedAugmentCategory === "Prismatic" && 
                                 <DropdownSelector 
                                 optionsFilePath='/tft-augments-prismatic.json'
                                 selectedOptions={selectedAugments} 
@@ -167,12 +172,14 @@ const SelectorCard: React.FC = () => {
                                 <DropdownSelector 
                                 optionsFilePath='/tft-augments-silver.json'
                                 selectedOptions={selectedAugments} 
-                                onSelectedOptionsChange={handleSelectedAugmentsChange}/>}
-                                {selectedAugmentCategory === "Silver" && 
+                                onSelectedOptionsChange={handleSelectedAugmentsChange}/>} */}
+                                {/* {selectedAugmentCategory === "Silver" &&  */}
                                 <DropdownSelector 
-                                optionsFilePath='/tft-augments-silver.json'
+                                optionsFilePath='/tft-augments.json'
+                                selectedCategory={3}
+                                selectedTier={1}
                                 selectedOptions={selectedAugments} 
-                                onSelectedOptionsChange={handleSelectedAugmentsChange}/>}
+                                onSelectedOptionsChange={handleSelectedAugmentsChange}/>
                             </div>
                         </Grid>
                     </Grid>
