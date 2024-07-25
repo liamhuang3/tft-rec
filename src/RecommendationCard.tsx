@@ -18,32 +18,17 @@ interface RecommendationCardProps {
   }
 
 const RecommendationCard: React.FC<RecommendationCardProps> = ({ compsList }) => {
-    const [updatedCompsList, setUpdatedCompsList] = useState<compsInter[]>([]);
 
     useEffect(() => {
-        console.log("useffect run")
-        let newCompsList = compsList;
-        for (let i = 0; i < newCompsList.length; i++) {
-            for (let j = 0; j < newCompsList[i].champions.length; j++) {
-                newCompsList[i].champions[j] = '/champions_square/' + newCompsList[i].champions[j] + '.TFT_Set11.png'
-            }
-            for (let j = 0; j < newCompsList[i].items.length; j++) {
-                newCompsList[i].items[j] = '/items/' + newCompsList[i].items[j] + '.png'
-            }
-            for (let j = 0; j < newCompsList[i].augments.length; j++) {
-                newCompsList[i].augments[j] = '/augments/' + newCompsList[i].augments[j] + '.png'
-            }
-        }
-
-        setUpdatedCompsList(newCompsList);
-      }, [compsList]);
+        console.log(compsList)
+    }, [compsList]);
 
     return (
         <div>
             <Card sx={{ mt: '16px', mx: '32px' }}>
                 <CardContent>
                     <Typography variant="h5">Recommended Compositions</Typography>
-                    {updatedCompsList.map((comp, index) => (
+                    {compsList.map((comp, index) => (
                         <div key={index}>
                             <Divider sx={{ my: 2 }} />
                             <div>
@@ -58,11 +43,6 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ compsList }) =>
                                 <div>
                                     <Typography variant="h5" sx={{ my: 2 }}>Champions</Typography>
                                         <IconDisplaySmall iconUrls={comp.champions} sideLength={40}></IconDisplaySmall>
-                                        {/* {comp.champions.map(champ => (
-                                            
-                                        ))
-
-                                        } */}
                                     <Divider sx={{ my: 1 }} />
                                     <Typography variant="h5" sx={{ my: 2 }}>Items</Typography>
                                         <IconDisplaySmall iconUrls={comp.items} sideLength={40}></IconDisplaySmall>

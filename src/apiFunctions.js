@@ -62,6 +62,7 @@ export async function getStats(){
     const puuids = await getPuuids(summoners)
     const matchIds = await getMatchIds(puuids)
     const matchDatas = await getMatchData(matchIds)
+    const PREFIX = "TFT11_"
 
     console.log(matchDatas)
     let comps = []
@@ -87,7 +88,8 @@ export async function getStats(){
                 player.traits.sort((a, b) => b.num_units - a.num_units)
                 const traits = player.traits.slice(0,2)
                 for (const trait of traits){
-                    comp.traits.push(trait.name) //this pushes the name only, can change to push entire object if necessary
+
+                    comp.traits.push(trait.name.substring(PREFIX.length)) //this pushes the name only, can change to push entire object if necessary
                 }
             }
             comps.push(comp)
@@ -109,6 +111,17 @@ export async function getRecommendations(userInput = [], compArray = []){
     let numMatching = []
 
     for (const comp of compArray) {
+        for (let j = 0; j < comp.champions.length; j++) {
+            comp.champions[j] = '/champions_square/' + comp.champions[j] + '.TFT_Set11.png'
+        }
+        for (let j = 0; j < comp.items.length; j++) {
+            comp.items[j] = '/items/' + comp.items[j] + '.png'
+        }
+        for (let j = 0; j < comp.augments.length; j++) {
+            comp.augments[j] = '/augments/' + comp.augments[j] + '.png'
+        }
+
+
         let mergedComp = [
             ...comp.champions,
             ...comp.items,
