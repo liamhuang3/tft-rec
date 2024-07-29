@@ -101,43 +101,49 @@ export async function getStats(){
 }
 
 export async function getRecommendations(userInput = [], compArray = []){
-    // recommendations = {
-    //     items: [],
-    //     champions: [],
-    //     augments: []
-    // }
-
     // no need to split up items, champs, augments, we just go for total matching
     let numMatching = []
 
-    for (const comp of compArray) {
-        for (let j = 0; j < comp.champions.length; j++) {
-            comp.champions[j] = '/champions_square/' + comp.champions[j] + '.TFT_Set11.png'
+    try {
+        const response = await fetch("/tft-augments.json")
+        const data = await response.json()
+
+        for (const comp of compArray) {
+
+            let mergedComp = [
+                ...comp.champions,
+                ...comp.items,
+                ...comp.augments,
+            ]
+
+            const userInputStrings = userInput.map(item => item.name);
+            const matchingCount = userInputStrings.filter(value => mergedComp.some(comp => comp.includes(value))).length;
+
+            for (let j = 0; j < comp.champions.length; j++) {
+                comp.champions[j] = '/champions_square/' + comp.champions[j] + '.TFT_Set11.png'
+            }
+            for (let j = 0; j < comp.items.length; j++) {
+                comp.items[j] = '/items/' + comp.items[j] + '.png'
+            }
+            for (let j = 0; j < comp.augments.length; j++) {
+                comp.augments[j] = '/augments/' + data['data'][comp.augments[j]].image.full
+                //comp.augments[j] = '/augments/' + comp.augments[j] + '.png'
+            }
+            console.log(matchingCount)
+
+            numMatching.push({ index: compArray.indexOf(comp), count: matchingCount });
         }
-        for (let j = 0; j < comp.items.length; j++) {
-            comp.items[j] = '/items/' + comp.items[j] + '.png'
-        }
-        for (let j = 0; j < comp.augments.length; j++) {
-            comp.augments[j] = '/augments/' + comp.augments[j] + '.png'
-        }
+            
 
+        console.log(numMatching)
+        numMatching.sort((a, b) => b.count - a.count);
 
-        let mergedComp = [
-            ...comp.champions,
-            ...comp.items,
-            ...comp.augments,
-        ]
+        const topComps = numMatching.slice(0, 3).map(item => compArray[item.index]);
 
-        const userInputStrings = userInput.map(item => item.name);
-        const matchingCount = userInputStrings.filter(value => mergedComp.includes(value)).length;
-
-        numMatching.push({ index: compArray.indexOf(comp), count: matchingCount });
+        console.log(topComps)
+        return topComps
+    } catch (error) {
+        console.error('Error fetching JSON:', error);
+        return [];
     }
-
-    numMatching.sort((a, b) => b.count - a.count);
-
-    const topComps = numMatching.slice(0, 3).map(item => compArray[item.index]);
-    //can return % matching too
-    console.log(topComps)
-    return topComps
 }

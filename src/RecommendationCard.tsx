@@ -1,8 +1,5 @@
 import { Card, CardContent, Container, Typography, Divider, Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import one_img from './assets/1_trans.png';
-import two_img from './assets/2_trans.png';
-import three_img from './assets/3_trans.png';
 import { Option } from './DropdownSelector';
 import ChampionIcon from './ChampionIcon';
 import IconDisplaySmall from './IconDisplaySmall';
@@ -18,6 +15,7 @@ interface RecommendationCardProps {
   }
 
 const RecommendationCard: React.FC<RecommendationCardProps> = ({ compsList }) => {
+    const numImagesArray = ['/assets/1_trans.png', '/assets/2_trans.png', '/assets/3_trans.png'];
 
     useEffect(() => {
         console.log(compsList)
@@ -34,7 +32,7 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ compsList }) =>
                             <div>
                                 <Grid container spacing={1}>
                                     <Grid item xs={1}>
-                                        <img src={one_img} alt="One Icon" style={{ width: '40px', height: '40px' }} />
+                                        <img src={numImagesArray[index]} style={{ width: '40px', height: '40px' }} />
                                     </Grid>
                                     <Grid item xs={11}>
                                         <Typography variant="h4">{comp.traits[0] + " & " + comp.traits[1]}</Typography>
